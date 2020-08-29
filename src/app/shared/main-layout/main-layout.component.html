@@ -1,0 +1,31 @@
+<nav class="navbar bg-dark">
+    <h2>
+        <a [routerLink]="['/']" routerLinkActive="router-link-active" >
+        Online Shop
+        </a>
+    </h2>
+
+    <ul>
+
+        <li routerLinkActive="active">
+            <a [routerLink]="['/admin','add']">Add product</a>
+        </li>
+        <li routerLinkActive="active">
+            <a [routerLink]="">Phone</a>
+        </li>
+        <li routerLinkActive="active">
+            <a [routerLink]="">Tablet</a>
+        </li>
+        <li routerLinkActive="active">
+            <a [routerLink]="">Laptop</a>
+        </li>
+        <li routerLinkActive="active">
+            <a  [routerLink]="['/cart']">Cart</a>
+        </li>
+    </ul>
+</nav>
+
+<div class="container">
+    <router-outlet></router-outlet>
+</div>
+
