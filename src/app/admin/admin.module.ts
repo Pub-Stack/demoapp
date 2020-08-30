@@ -2,6 +2,7 @@ import { NgModule } from "@angular/core";
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { QuillModule } from 'ngx-quill';
+import { MaterialModule } from '../material/material.module';
 
 import { AdminLayoutComponent } from './shared/admin-layout/admin-layout.component';
 import { LoginPageComponent } from './login-page/login-page.component';
@@ -10,6 +11,7 @@ import { AddPageComponent } from './add-page/add-page.component';
 import { OrdersPageComponent } from './orders-page/orders-page.component';
 import { EditPageComponent } from './edit-page/edit-page.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -27,6 +29,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
         CommonModule,
         FormsModule,
         ReactiveFormsModule,
+        MaterialModule,
         QuillModule.forRoot(),
         RouterModule.forChild([
             {

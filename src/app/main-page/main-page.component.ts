@@ -18,5 +18,10 @@ export class MainPageComponent implements OnInit {
   ngOnInit() {
     this.products$ = this.productServ.getAll()
   }
+  gridColumns = 3;
+
+  toggleGridColumns() {
+    this.gridColumns = this.gridColumns === 3 ? 4 : 3;
+  }
 
 }

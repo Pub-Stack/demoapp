@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ProductService } from 'src/app/shared/product.service';
+import { ProductService } from '../../shared/product.service';
 import { switchMap } from 'rxjs/operators';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { Product } from 'src/app/shared/interfaces';
+import { Product } from '../../shared/interfaces';
 
 @Component({
   selector: 'app-edit-page',

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 @import "~quill/dist/quill.snow.css";
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
 
 
 :root {
@@ -22,6 +23,12 @@ body {
   line-height: 1.6;
   background-color: #fff;
   color: #333;
+}
+.spacer{
+  flex: 1 1 auto;
+}
+a.active {
+  background: lightgrey;
 }
 
 a {
@@ -284,3 +291,6 @@ table th {
   }
 }
 
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

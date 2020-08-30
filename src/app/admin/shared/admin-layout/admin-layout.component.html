@@ -1,23 +1,14 @@
-<nav class="navbar bg-dark">
+<mat-toolbar>
     <h1>
-        <a routerLink="/">Online Shop</a>
+        <a routerLink="/">Online Shop(Admin panel)</a>
     </h1>
-
-    <ul >
-        <li routerLinkActive="active">
-            <a [routerLink]="['/admin','dashboard']">Dashboard</a>
-        </li>
-        <li routerLinkActive="active">
-            <a [routerLink]="['/admin','add']">Add product</a>
-        </li>
-        <li routerLinkActive="active">
-            <a [routerLink]="['/admin','orders']">Orders</a>
-        </li>
-        <li routerLinkActive="active">
-            <a href="#" >Logout</a>
-        </li>
-    </ul>
-
+    <span class="spacer"></span>
+    <div>
+        <a mat-button [routerLink]="['/admin','dashboard']" routerLinkActive="active">Dashboard</a>
+        <a mat-button [routerLink]="['/admin','add']" routerLinkActive="active">Add product</a>
+        <a mat-button [routerLink]="['/admin','orders']" routerLinkActive="active">Orders</a>
+        <a mat-button href="#" routerLinkActive="active">Logout</a>
+    </div>
     <ng-template #login>
         <ul>
             <li routerLinkActive="active">
@@ -26,7 +17,7 @@
         </ul>
     </ng-template>
 
-</nav>
+</mat-toolbar>
 
 <div class="container">
     <router-outlet></router-outlet>

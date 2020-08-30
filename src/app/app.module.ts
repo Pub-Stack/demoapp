@@ -14,6 +14,14 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { ProductComponent } from './product/product.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material/material.module';
+import { HeaderComponent } from './shared/header/header.component';
+import { SidenavListComponent } from './shared/sidenav-list/sidenav-list.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+
+
+
 
 
 
@@ -26,6 +34,8 @@ import { environment } from '../environments/environment';
     CartPageComponent,
     PageNotFoundComponent,
     ProductComponent,
+    HeaderComponent,
+    SidenavListComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,7 +44,12 @@ import { environment } from '../environments/environment';
     FormsModule,
     ReactiveFormsModule,
     QuillModule.forRoot(),
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    BrowserAnimationsModule,
+    MaterialModule,
+    FlexLayoutModule
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]

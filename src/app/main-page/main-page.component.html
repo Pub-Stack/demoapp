@@ -1,4 +1,17 @@
-<div *ngIf="products$ | async as products" class="dashboard">
-    <app-product *ngFor="let product of products " class="box" [product]="product">
+<!-- <button mat-button (click)="toggleGridColumns()" fxHide.lt-md>
+    <span *ngIf="gridColumns === 4">Three Columns</span>
+    <span *ngIf="gridColumns === 3">Four Columns</span>
+</button> -->
+
+<div *ngIf="products$ | async as products" 
+    class="content" 
+    fxLayout="row wrap" 
+    fxLayoutGap="16px grid">
+    <app-product 
+      [fxFlex]="(100/gridColumns) + '%'" 
+      fxFlex.xs="100%" 
+      fxFlex.sm="33%"
+      *ngFor="let product of products " 
+      [product]="product" >
     </app-product>
 </div>
