@@ -1,13 +1,13 @@
 <mat-toolbar>
     <h1>
-        <a routerLink="/">Online Shop(Admin panel)</a>
+        <a routerLink="/">Demo App</a>
     </h1>
     <span class="spacer"></span>
-    <div>
+    <div *ngIf="auth.isAuthenticated(); else login">
         <a mat-button [routerLink]="['/admin','dashboard']" routerLinkActive="active">Dashboard</a>
         <a mat-button [routerLink]="['/admin','add']" routerLinkActive="active">Add product</a>
         <a mat-button [routerLink]="['/admin','orders']" routerLinkActive="active">Orders</a>
-        <a mat-button href="#" routerLinkActive="active">Logout</a>
+        <a mat-button href="#" (click)="logout($event)" routerLinkActive="active">Logout</a>
     </div>
     <ng-template #login>
         <ul>

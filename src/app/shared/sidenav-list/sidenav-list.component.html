@@ -1,17 +1,23 @@
 <mat-nav-list>
-    <a mat-list-item routerLink="/" (click)="onClose()" >
+  <!-- <a mat-list-item routerLink="/" (click)="onClose()" >
       <mat-icon>face</mat-icon>
       <span class="nav-caption">Signup</span>
-    </a>
-    <a mat-list-item routerLink="/" (click)="onClose()" >
-      <mat-icon>input</mat-icon>
-      <span class="nav-caption">Login</span>
-    </a>
+    </a> -->
+  <a mat-list-item routerLink="/admin/login" (click)="onClose()" *ngIf="!auth.isAuthenticated(); else logout">
+    <mat-icon>input</mat-icon>
+    <span class="nav-caption">Login</span>
+  </a>
+  <!-- <ng-template #logout>
+    <button mat-icon-button (click)="logout($event)">
 
-    <mat-list-item>
-      <button mat-icon-button>
-        <mat-icon>eject</mat-icon>
-        <span class="nav-caption">Logout</span>
-      </button>
-    </mat-list-item>
-  </mat-nav-list>
+      <mat-icon>eject</mat-icon>
+      <span class="nav-caption">Logout</span>
+    </button>
+  </ng-template> -->
+  <ng-template #logout>
+    <button mat-icon-button (click)="out($event)">
+      <mat-icon>eject</mat-icon>
+      <span class="nav-caption">Logout</span>
+    </button>
+  </ng-template>
+</mat-nav-list>

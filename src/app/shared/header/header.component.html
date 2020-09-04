@@ -6,12 +6,11 @@
     </div>
     <h1>
         <a [routerLink]="['/']" routerLinkActive="router-link-active">
-            Online Shop
+            Demo App
         </a>
     </h1>
     <span class="spacer"></span>
     <div routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">
-        <a mat-button [routerLink]="['/admin','add']" routerLinkActive="active">Add product(Admin link)</a>
         <a mat-button [routerLink]="" routerLinkActive="active-link">Phone</a>
         <a mat-button [routerLink]="" routerLinkActive="active-link">Tablet</a>
         <a mat-button [routerLink]="" routerLinkActive="active-link">Laptop</a>
